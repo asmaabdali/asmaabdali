@@ -1,0 +1,509 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610">
+
+<defs>
+
+  <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#8B5CF6"/>
+    <stop offset="50%" stop-color="#22D3EE"/>
+    <stop offset="100%" stop-color="#10B981"/>
+    <animateTransform
+      attributeName="gradientTransform"
+      type="translate"
+      values="0 0;120 0;0 0"
+      dur="7s"
+      repeatCount="indefinite"/>
+  </linearGradient>
+
+  <radialGradient id="purpleGlow">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity=".28"/>
+    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+  </radialGradient>
+
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="18"/>
+  </filter>
+
+  <filter id="imageGlow">
+    <feGaussianBlur stdDeviation="7"/>
+  </filter>
+
+  <clipPath id="portraitClip">
+    <rect x="65" y="105" width="330" height="390" rx="25"/>
+  </clipPath>
+
+</defs>
+
+
+<!-- BACKGROUND -->
+
+<rect width="1180"
+      height="610"
+      rx="30"
+      fill="#030712"/>
+
+
+<!-- BACKGROUND GLOW -->
+
+<circle cx="180"
+        cy="180"
+        r="300"
+        fill="url(#purpleGlow)"
+        filter="url(#blur)">
+
+  <animateTransform
+    attributeName="transform"
+    type="translate"
+    values="0 0;45 25;0 0"
+    dur="10s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+
+<circle cx="1050"
+        cy="520"
+        r="300"
+        fill="#22D3EE"
+        opacity=".08"
+        filter="url(#blur)">
+
+  <animateTransform
+    attributeName="transform"
+    type="translate"
+    values="0 0;-40 -25;0 0"
+    dur="12s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+
+<!-- BORDER -->
+
+<rect x="2"
+      y="2"
+      width="1176"
+      height="606"
+      rx="30"
+      fill="none"
+      stroke="url(#accent)"
+      stroke-width="2"
+      opacity=".5">
+
+  <animate
+    attributeName="opacity"
+    values=".25;.8;.25"
+    dur="4s"
+    repeatCount="indefinite"/>
+
+</rect>
+
+
+<!-- ========================= -->
+<!-- LEFT PHOTO CARD           -->
+<!-- ========================= -->
+
+<rect x="45"
+      y="65"
+      width="370"
+      height="480"
+      rx="30"
+      fill="#0F172A"
+      stroke="#FFFFFF"
+      stroke-opacity=".08"/>
+
+
+<!-- PHOTO GLOW -->
+
+<rect x="65"
+      y="105"
+      width="330"
+      height="390"
+      rx="25"
+      fill="none"
+      stroke="#22D3EE"
+      stroke-width="10"
+      opacity=".20"
+      filter="url(#imageGlow)"/>
+
+
+<!-- YOUR PHOTO -->
+
+<image
+  href="https://raw.githubusercontent.com/asmaabdali/asmaabdali/main/IMG_2292.jpeg"
+  x="65"
+  y="105"
+  width="330"
+  height="390"
+  preserveAspectRatio="xMidYMid slice"
+  clip-path="url(#portraitClip)"
+  opacity="0">
+
+  <!-- PHOTO APPEARS -->
+
+  <animate
+    attributeName="opacity"
+    values="0;0;1"
+    keyTimes="0;.25;1"
+    dur="3s"
+    fill="freeze"/>
+
+  <!-- PHOTO FLOATS -->
+
+  <animateTransform
+    attributeName="transform"
+    type="translate"
+    values="0 5;0 -5;0 5"
+    dur="6s"
+    repeatCount="indefinite"/>
+
+</image>
+
+
+<!-- PHOTO COLOR OVERLAY -->
+
+<rect x="65"
+      y="105"
+      width="330"
+      height="390"
+      rx="25"
+      fill="url(#accent)"
+      opacity=".08"/>
+
+
+<!-- MOVING SCANLINE -->
+
+<rect x="65"
+      y="105"
+      width="330"
+      height="3"
+      fill="#22D3EE"
+      opacity=".65">
+
+  <animate
+    attributeName="y"
+    values="105;495;105"
+    dur="4s"
+    repeatCount="indefinite"/>
+
+</rect>
+
+
+<!-- SMALL CORNER DETAILS -->
+
+<path d="M65 140 V115 Q65 105 75 105 H100"
+      fill="none"
+      stroke="#22D3EE"
+      stroke-width="2"/>
+
+<path d="M360 495 H385 Q395 495 395 485 V460"
+      fill="none"
+      stroke="#8B5CF6"
+      stroke-width="2"/>
+
+
+<!-- PHOTO LABEL -->
+
+<rect x="85"
+      y="455"
+      width="185"
+      height="30"
+      rx="15"
+      fill="#030712"
+      opacity=".82"/>
+
+<text x="102"
+      y="475"
+      font-family="monospace"
+      font-size="11"
+      fill="#22D3EE">
+
+  ASMA // ONLINE
+
+</text>
+
+
+<!-- ========================= -->
+<!-- RIGHT TERMINAL            -->
+<!-- ========================= -->
+
+<rect x="450"
+      y="65"
+      width="685"
+      height="480"
+      rx="30"
+      fill="#0F172A"
+      stroke="#FFFFFF"
+      stroke-opacity=".09"/>
+
+
+<!-- TERMINAL HEADER -->
+
+<circle cx="485" cy="95" r="6" fill="#EF4444"/>
+<circle cx="507" cy="95" r="6" fill="#F59E0B"/>
+<circle cx="529" cy="95" r="6" fill="#10B981"/>
+
+<text x="560"
+      y="100"
+      font-family="monospace"
+      font-size="12"
+      fill="#64748B">
+
+  asma@github:~$
+
+</text>
+
+
+<!-- COMMAND -->
+
+<text x="490"
+      y="145"
+      font-family="monospace"
+      font-size="14"
+      fill="#64748B">
+
+  $ ./introduce.sh
+
+</text>
+
+
+<!-- GREETING -->
+
+<text x="490"
+      y="195"
+      font-family="Arial"
+      font-size="32"
+      font-weight="700"
+      fill="#F8FAFC">
+
+  Hi 👋
+
+</text>
+
+
+<!-- NAME -->
+
+<text x="490"
+      y="240"
+      font-family="Arial"
+      font-size="38"
+      font-weight="700"
+      fill="url(#accent)">
+
+  ASMA ABDALI
+
+</text>
+
+
+<!-- TYPING -->
+
+<text x="490"
+      y="278"
+      font-family="monospace"
+      font-size="15"
+      fill="#94A3B8">
+
+  Computer Science Student
+  <tspan fill="#22D3EE">█</tspan>
+
+  <animate
+    attributeName="opacity"
+    values="1;0;1"
+    dur="1s"
+    repeatCount="indefinite"/>
+
+</text>
+
+
+<!-- DIVIDER -->
+
+<line x1="490"
+      y1="305"
+      x2="1090"
+      y2="305"
+      stroke="#FFFFFF"
+      stroke-opacity=".08"/>
+
+
+<!-- INFORMATION -->
+
+<text x="490"
+      y="345"
+      font-family="monospace"
+      font-size="12"
+      fill="#64748B">
+
+  EDUCATION
+
+</text>
+
+<text x="650"
+      y="345"
+      font-family="monospace"
+      font-size="14"
+      fill="#F8FAFC">
+
+  Computer Science
+
+</text>
+
+
+<text x="490"
+      y="380"
+      font-family="monospace"
+      font-size="12"
+      fill="#64748B">
+
+  FOCUS
+
+</text>
+
+<text x="650"
+      y="380"
+      font-family="monospace"
+      font-size="14"
+      fill="#22D3EE">
+
+  Python • Artificial Intelligence
+
+</text>
+
+
+<text x="490"
+      y="415"
+      font-family="monospace"
+      font-size="12"
+      fill="#64748B">
+
+  STATUS
+
+</text>
+
+<text x="650"
+      y="415"
+      font-family="monospace"
+      font-size="14"
+      fill="#10B981">
+
+  ● Learning &amp; Building
+
+</text>
+
+
+<!-- SKILLS -->
+
+<rect x="490"
+      y="445"
+      width="85"
+      height="32"
+      rx="16"
+      fill="#7C3AED"
+      fill-opacity=".18"
+      stroke="#7C3AED"
+      stroke-opacity=".5"/>
+
+<text x="510"
+      y="466"
+      font-family="Arial"
+      font-size="12"
+      fill="#C4B5FD">
+
+  Python
+
+</text>
+
+
+<rect x="585"
+      y="445"
+      width="55"
+      height="32"
+      rx="16"
+      fill="#22D3EE"
+      fill-opacity=".14"
+      stroke="#22D3EE"
+      stroke-opacity=".5"/>
+
+<text x="604"
+      y="466"
+      font-family="Arial"
+      font-size="12"
+      fill="#67E8F9">
+
+  AI
+
+</text>
+
+
+<rect x="650"
+      y="445"
+      width="55"
+      height="32"
+      rx="16"
+      fill="#10B981"
+      fill-opacity=".14"
+      stroke="#10B981"
+      stroke-opacity=".5"/>
+
+<text x="669"
+      y="466"
+      font-family="Arial"
+      font-size="12"
+      fill="#6EE7B7">
+
+  Git
+
+</text>
+
+
+<!-- FOOTER -->
+
+<text x="490"
+      y="515"
+      font-family="monospace"
+      font-size="12"
+      fill="#475569">
+
+  $ echo "keep building."
+
+</text>
+
+<text x="650"
+      y="515"
+      font-family="monospace"
+      font-size="12"
+      fill="#22D3EE">
+
+  █
+
+  <animate
+    attributeName="opacity"
+    values="1;0;1"
+    dur=".8s"
+    repeatCount="indefinite"/>
+
+</text>
+
+
+<!-- PARTICLES -->
+
+<circle cx="425" cy="120" r="1.5" fill="#22D3EE">
+
+  <animate
+    attributeName="opacity"
+    values="0;1;0"
+    dur="2s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+<circle cx="1100" cy="550" r="1.5" fill="#8B5CF6">
+
+  <animate
+    attributeName="opacity"
+    values="0;1;0"
+    dur="3s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+
+</svg>
